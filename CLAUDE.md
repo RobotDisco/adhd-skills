@@ -3,6 +3,7 @@
 Personal Claude Code skill marketplace for ADHD/GTD system management. It contains a tool-agnostic system.
 
 Architectural decisions live in `adr/`. Outstanding migration work is in `TODO.md`.
+The intellectual sources behind these decisions are in `SOURCES.md`.
 
 ---
 

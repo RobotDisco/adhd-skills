@@ -50,6 +50,22 @@ domain directory and register it in `.claude-plugin/marketplace.json`.
 
 To install skill-creator: `/plugin install skill-creator@claude-plugins-official`
 
+## Influences
+
+The system design draws on these sources — see [SOURCES.md](SOURCES.md) for annotations
+on how each one shapes the decisions made here.
+
+| Source | What it contributes |
+|---|---|
+| [Russell Barkley](https://www.russellbarkley.org/) | Executive function model of ADHD — the neurological why behind every design choice |
+| [Dr. K / HealthyGamerGG](https://coaching.healthygamer.gg/guide/modules/adhd) | Behavioural translation of clinical ADHD research for modern, screen-heavy environments |
+| [How to ADHD](https://www.youtube.com/@HowtoADHD) (Jessica McCabe) | Practical reframes: system failures as design bugs, not character flaws |
+| [Midwest Magic Cleaning](https://www.youtube.com/@MidwestMagicCleaning) (Jason) | The Fluid Method — start moving things, don't plan before you begin; applies to all messes |
+| [Jesse J. Anderson](https://www.extrafocusbook.com/) | 4 Cs motivation framework: ADHD runs on Challenge, Competition, Creativity, Completion |
+| [David Allen](https://gettingthingsdone.com/) — *Getting Things Done* | Structural backbone: one inbox, next physical action, someday/maybe |
+| [Developer Tea](https://developertea.com/) (Jonathan Cutrell) | A project needs a goal *and* a deadline — missing either, it's a dream |
+| [Conn & McLean](https://bulletproofproblemsolving.com/) — *Bulletproof Problem Solving* | MECE decomposition for the project breakdown workflow (not yet built) |
+
 ## License
 
 GPLv3. See [LICENSE](LICENSE).
