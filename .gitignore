@@ -1,0 +1,6 @@
+.DS_Store
+
+# Emacs backup and autosave files
+*~
+\#*\#
+.\#*
