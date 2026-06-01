@@ -12,7 +12,7 @@ The intellectual sources behind these decisions are in `SOURCES.md`.
 **Scope: building and evolving the system, not operating it day-to-day.** The long-term goal
 is a self-sufficient setup that runs without Claude in the loop. Claude's job is to design,
 refactor, tune configuration, and capture decisions. Skills (slash commands for rituals like
-inbox triage or weekly review) are an explicit exception worth exploring case-by-case: if a
+gtd-triage or gtd-review) are an explicit exception worth exploring case-by-case: if a
 skill genuinely reduces friction more than a native tooling equivalent would, it earns a place.
 **Default assumption: prefer the tool-native solution.**
 
@@ -176,8 +176,8 @@ requirements."** Only add a tag when one of these is true:
 | `@phone` | Requires a voice call specifically |
 | `@home` | Requires physical home presence |
 | `@errand` | Must physically leave the house |
+| `@homelab` | Home server infrastructure access (SSH, darktower, etc.) |
 | `@brain` | Needs deep focus or high mental energy |
-| `@online` | Browser/web access required |
 | `work` | Work-adjacent category — career/learning/research, not operational tasks |
 | `project` | Multi-step container; children are next actions |
 
@@ -219,8 +219,6 @@ When resolved, each becomes an ADR in `adr/` and is removed from here.
 
 - **Reference lists** — keep as plain checklists in a dedicated file, or migrate to a
   knowledge graph tool? They're reference, not tasks.
-- **Someday vs tickler boundary** — when does a recurring-ish task belong in a tickler file
-  vs the Someday queue? Probably: tickler = has a clear cadence; Someday = no cadence.
 - **Low-energy context** — the current tag system handles the high end (`@brain` = needs focus)
   but has no low-energy equivalent. ADHD capacity swings hard. A `@routine` or `@low-energy`
   tag would let any-capacity windows have a ready queue. Meaningful gap but not urgent until
@@ -260,6 +258,13 @@ or a new domain) and describe the workflow. It will create the SKILL.md, set up 
 
 If it's a new domain, also register it in `.claude-plugin/marketplace.json`.
 
+### Skill naming convention
+
+Use a domain prefix when the noun is generic enough to be ambiguous across domains.
+In practice, all GTD skills use `gtd-*` (e.g. `gtd-triage`, `gtd-review`). Future
+brain skills would use `brain-*`. This prevents namespace collisions (e.g. "inbox"
+could mean GTD inbox or email inbox).
+
 ### Authoring notes
 
 - Keep the SKILL.md body to the process and behavioral rules — what Claude does.
@@ -267,3 +272,6 @@ If it's a new domain, also register it in `.claude-plugin/marketplace.json`.
   the skill read them at the start of each session.
 - The `description` frontmatter drives auto-trigger matching; make the first
   sentence cover the main use-case phrases the user will say.
+- Skills should be self-contained — do not reference `CLAUDE.md` at runtime.
+  Shared content across multiple skills belongs in `gtd/references/` (GTD-specific)
+  or `references/` (domain-agnostic).
