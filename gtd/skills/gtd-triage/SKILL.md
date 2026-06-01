@@ -22,9 +22,11 @@ action plan they can execute in Emacs immediately after.
 1. Read `references/decision-rules.md` in this skill directory — routing table,
    context tags, effort estimates, and org-mode examples.
 
-2. Read `~/Documents/gtd/inbox.org` — the file being triaged.
+2. Read `../../references/system-vocab.md` — file map, section structure, task routing.
 
-3. Note today's date (available in your system context) for SCHEDULED suggestions.
+3. Read `~/Documents/gtd/inbox.org` — the file being triaged.
+
+4. Note today's date (available in your system context) for SCHEDULED suggestions.
 
 ---
 

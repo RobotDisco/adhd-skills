@@ -23,11 +23,16 @@ Target time: 30 minutes. Name it if the session runs long.
 1. Read `references/review-checklist.md` in this skill directory — the criteria for
    a well-formed system.
 
-2. Read `~/Documents/gtd/personal.org` — the file being reviewed.
+2. Read `../../references/system-vocab.md` — file map, section structure, task routing.
 
-3. Note today's date (available in system context).
+3. Read `../../references/org-conventions.md` — project patterns, habit conventions,
+   org-mode property rules.
 
-4. Check `~/Documents/gtd/inbox.org` — if it has unprocessed items, flag it before
+4. Read `~/Documents/gtd/personal.org` — the file being reviewed.
+
+5. Note today's date (available in system context).
+
+6. Check `~/Documents/gtd/inbox.org` — if it has unprocessed items, flag it before
    starting: *"Inbox has items — run inbox-triage first, or continue with the
    understanding that unprocessed captures exist."*
 
