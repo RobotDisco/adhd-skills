@@ -28,7 +28,8 @@ work history.
 ## Consequences
 
 - Deletion is always the correct action when the triage skill encounters completed items
-  in `inbox.org`.
-- Syncthing file history serves as the safety net if a deletion is ever regretted.
+  in the inbox.
+- File sync or version history serves as the safety net if a deletion is ever regretted.
+  *(Current implementation: Seafile file history.)*
 - Periodically completed items from ongoing work (habits, recurring tasks) should not live
   in the inbox — they belong in their home files where archival *is* appropriate.
