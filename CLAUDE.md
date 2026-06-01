@@ -16,6 +16,12 @@ inbox triage or weekly review) are an explicit exception worth exploring case-by
 skill genuinely reduces friction more than a native tooling equivalent would, it earns a place.
 **Default assumption: prefer the tool-native solution.**
 
+**ADRs for significant decisions:** when a significant system design decision is made during
+a session, propose an ADR and write it to `adr/`. Significant means: non-obvious, likely to
+be second-guessed later, or carrying reasoning that isn't apparent from the CLAUDE.md alone.
+ADRs follow the format in `adr/` — Context, Decision, Alternatives considered, Consequences.
+Number sequentially. Update CLAUDE.md to reflect the decision; the ADR preserves the why.
+
 When working here, operate as a combination **ADHD life coach / executive-function therapist**
 and **productivity tooling expert**. Both roles are always on — most decisions in this system are
 simultaneously a tooling choice *and* a self-regulation choice, and the right answer depends
@@ -43,6 +49,14 @@ productivity-influencer platitudes. Specifically:
 - **Rejection sensitivity / self-criticism** — language matters. "Behind on the system" is
   corrosive; "the system isn't fitting this week" is workable. Frame failures of the system
   as system bugs, not user failures.
+- **Personal time vs. work productivity (category error)** — applying work output metrics
+  (tasks completed, deliverables produced) to personal time generates unavoidable shame:
+  rest, recovery, connection, and enjoyment score zero on those metrics, not because they
+  failed but because the metric is wrong. Personal time has its own success conditions: was
+  energy restored? Was something meaningful experienced? Was care taken? Using the right
+  metric isn't lowering the bar — it also closes the cognitive loop. "The personal day is
+  complete" lands differently than "I didn't do enough." When coaching, name this category
+  error explicitly when the user is measuring personal time by work standards.
 
 **Practical implications for how you engage:**
 
@@ -80,6 +94,29 @@ ADHD ergonomics drive every structural choice. When in doubt, optimize for these
    be optional.
 6. **Inbox zero is a regular cadence, not an aspiration.** Evening sweep processes inbox into
    the system every day.
+7. **Behavioral anchors beat clock-based alerts for distributed habits.** In a meeting-heavy
+   day, arbitrary timed reminders get dismissed at bad moments and feel free to skip. Design
+   habit triggers around existing transitions (standup just ended, lunch starting, leaving desk)
+   rather than clock times. The transition IS the trigger.
+8. **Outcome measures without upstream triggers are decoration.** "Slept by midnight" is a
+   lagging indicator — you can only fail it, never act on it. The upstream intervention
+   (capture sweep creating a closure signal) is what makes the outcome reachable. Track the
+   upstream behavior; let the outcome follow.
+9. **Pre-define fallbacks for uncertain habit anchors at design time.** When a trigger is
+   context-dependent (e.g. "afternoon coffee — might not happen"), name the fallback in the
+   habit entry itself. Removes an in-the-moment decision from a low-energy moment.
+10. **Pre-decide at planning time; execute without deliberation.** Every decision required at
+    execution time is a decision at the wrong moment — lower energy, mid-context, competing
+    demands. Design rituals so that doing them requires no fresh choices: work priorities come
+    from the sprint board (externally decided), the personal Highlight was pre-decided the
+    previous evening, fallbacks are already named. Morning confirms; it does not deliberate.
+11. **Evening recovery is legitimate and necessary.** Exhausted-brain personal productivity
+    produces lower-quality output and worse rest than genuine recovery. The "not having done
+    enough" feeling is an open cognitive loop, not an accurate accounting — the work signoff
+    and 9pm sweep are the closure mechanisms. Reserve evenings for naturally-engaging
+    activities and genuine recovery; don't schedule executive-function tasks in low-energy
+    windows.
+12. **Relocate, don't inhibit.** "Don't do X" is an inhibition task — ADHD's weakest executive function. "I'm somewhere X isn't possible" removes the decision entirely. When designing transitions or context breaks, prefer changing the situation over relying on willpower. WFH makes this especially important: without a commute, the work context break must be designed deliberately.
 
 ---
 
@@ -148,18 +185,25 @@ requirements."** Only add a tag when one of these is true:
 
 ## Workflow rituals
 
+**The Highlight:** one self-directed personal win pre-decided for the next day. Not a work task — work priorities are externally set. Pre-decided at the work signoff (good energy); confirmed at morning planning (not re-decided). Gives personal time a shape without over-scheduling it.
+
 ### Capture (anytime)
 One place, no processing, no tags, no scheduling — just dump it.
 
-### Evening sweep / inbox triage (~15 min)
-Two decisions only per item: *what bucket* and *what state*. No decomposition, no project
-recognition, no scheduling. Use the `/inbox-triage` skill.
+### Work signoff (~5pm) — "work brain off"
+Two parts: (1) sweep — scan for anything to capture, mark done, preview tomorrow's calendar, set tomorrow's Highlight; (2) context break — do something that makes re-entering work require active effort, not passive drift. The sweep earns the closure; the context break enforces it.
+
+### Evening sweep (~9pm) — "whole day captured, brain is free"
+Capture only — review journal, brain dump to inbox, confirm tomorrow's Highlight if not already set. No planning, no next-day decisions. Earns the completion signal (going to bed).
+
+**Two shutdowns, different jobs:** work signoff closes the professional context; 9pm sweep closes the whole day. Sequential, not redundant.
 
 ### Morning planning (~10 min)
-1. Review today's agenda.
-2. Items without effort estimates get one now.
-3. Sanity check: does today's total effort fit the day? If not, push items.
-4. Optional: pick 1–3 must-do items and bump their priority.
+Zero fresh decisions — both priority streams are pre-decided:
+1. Work: check sprint board / task manager. Priorities are externally set — this is a lookup, not a decision. In sprint-based environments, the Highlight is never a work task; work is already decided.
+2. Personal: confirm yesterday's Highlight (pre-decided at work signoff). One self-directed win.
+3. Items without effort estimates get one now.
+4. Sanity check: does this fit between today's fixed commitments?
 
 ### Weekly review
 1. Inbox to zero.
