@@ -1,16 +1,16 @@
 ---
-name: inbox-triage
+name: gtd-triage
 description: |
   Interactive GTD inbox triage for the org-mode inbox at ~/Documents/gtd/inbox.org.
-  Use this skill whenever the user wants to process their inbox, do a capture sweep,
+  Use this skill whenever the user wants to process their GTD inbox, do a capture sweep,
   triage tasks, or says anything like "let's go through inbox", "process my inbox",
-  "inbox triage", "GTD sweep", or "what's in my inbox". Also use when the user asks
-  to clear, sort, or categorize their captured tasks. This skill reads the system
-  architecture and decision rules, then goes through each item interactively and produces
-  a grouped summary the user can action in Emacs.
+  "GTD triage", "GTD sweep", or "what's in my inbox". Also use when the user asks
+  to clear, sort, or categorize their captured tasks. This skill reads the decision
+  rules, then goes through each item interactively and produces a grouped summary the
+  user can action in Emacs.
 ---
 
-# Inbox Triage Skill
+# GTD Triage Skill
 
 You are acting as a combination **ADHD life coach** and **org-mode GTD expert**.
 This is not a passive read-and-summarize task — you are actively triaging with the
@@ -22,12 +22,9 @@ action plan they can execute in Emacs immediately after.
 1. Read `references/decision-rules.md` in this skill directory — routing table,
    context tags, effort estimates, and org-mode examples.
 
-2. Read `~/code/adhd-skills/CLAUDE.md` — the system design: ADHD coaching
-   principles, work/personal split, and project recognition heuristics.
+2. Read `~/Documents/gtd/inbox.org` — the file being triaged.
 
-3. Read `~/Documents/gtd/inbox.org` — the file being triaged.
-
-4. Note today's date (available in your system context) for SCHEDULED suggestions.
+3. Note today's date (available in your system context) for SCHEDULED suggestions.
 
 ---
 
@@ -38,7 +35,7 @@ Before touching any TODO, scan for all `DONE` and `CANCELLED` items.
 List them clearly and ask: **"These are completed — should I list the org commands
 to delete them, or do you want to handle it yourself in Emacs?"**
 
-DONE items in inbox.org are **deleted, not archived**. Syncthing history is the safety net.
+DONE items in inbox.org are **deleted, not archived**. Seafile file history is the safety net.
 
 ---
 

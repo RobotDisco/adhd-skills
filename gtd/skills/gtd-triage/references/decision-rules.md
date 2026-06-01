@@ -27,6 +27,7 @@ energy, no special requirements."** Only add a tag when one of these is true:
 |---|---|
 | `@errand` | Must physically leave the house |
 | `@home` | Requires physical home presence — not just laptop-at-home |
+| `@homelab` | Requires access to home server infrastructure (SSH, darktower, etc.) |
 | `@phone` | Requires a voice call specifically (not Slack/email) |
 | `@brain` | Needs deep focus or high mental energy |
 | `:work:` | Work-adjacent category (career/learning/research) — routing signal, not a context |
