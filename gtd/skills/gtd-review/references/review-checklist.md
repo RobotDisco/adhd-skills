@@ -17,6 +17,34 @@ Parent project headings: **no `SCHEDULED:` date** — prevents agenda bleed.
 - Exactly **one** `NEXT` subtask with `SCHEDULED:` and `:Effort:`
 - Remaining subtasks: `TODO` state, no date
 - `:ORDERED: t` when step sequence is strict
+- Tier 3 projects: parent links to org-roam node via `id:` link
+
+## Stuck project
+
+A project is stuck when its NEXT SCHEDULED date is in the past and hasn't moved.
+Required intervention (not optional rescheduling):
+- **Re-activate** — new NEXT + realistic date. Only if genuinely happening this week.
+- **PAUSED** — parent state → PAUSED, inline note on why.
+- **ABANDONED** — parent state → ABANDONED. Drift is not a state.
+
+## Deadline horizon (14-day scan)
+
+Before touching scheduling, check the near-term deadline window:
+- Pull up all items with a `DEADLINE:` in the next 14 days
+- For each: is it already `SCHEDULED:` with enough lead time to finish?
+- If not: schedule it now, or (if you can't commit) flag it explicitly
+
+A deadline that appears in this scan and has no scheduled work is an overdue decision,
+not just an overdue task.
+
+## Overcommitment check
+
+List all `:project:` parent headings in `* Active`. If the count is high, name it —
+too many active projects is a system problem, not a scheduling problem.
+
+Between weekly reviews, use your daily planning view's stuck-projects feature for a
+quick structural check (no NEXT or DOING subtask). See your Emacs reference for the
+keybinding.
 
 ## Well-formed Someday item
 

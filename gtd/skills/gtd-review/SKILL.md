@@ -55,14 +55,35 @@ name it: *"That's planning — let's note it and stay in review mode."*
 
 ## Phase 2: Project health
 
-For each item tagged `:project:` in `* Active`:
+**First: overcommitment check.** List every `:project:` item in `* Active` (parent
+headings only, no subtasks). Ask: "Is this actually in flight, or is it just sitting
+here?" Too many active projects is itself a problem — name it if the list is long.
+
+**Second: RETRO projects — check these first.** A project in RETRO state has finished
+its work but still has a completion obligation: harvest learnings, link permanent notes,
+write the outcome. These are the closest to done and easiest to close out.
+
+For each RETRO project:
+- Has a `NEXT` for the retro work (e.g. `* NEXT Write outcome + harvest permanent notes`)?
+- If yes: is it scheduled? If not, schedule it now.
+- If no NEXT: create one. RETRO without a NEXT is stuck.
+- Once retro NEXT is done → mark project COMPLETED.
+
+**Then, for each remaining project:**
 
 - Has exactly one `NEXT` subtask with `SCHEDULED:` and `:Effort:`?
 - Does the parent heading have **no** `SCHEDULED:` date?
 - Are remaining subtasks in `TODO` state with no date?
 
-Flag any project where the NEXT step is stale (SCHEDULED date is past) — it needs
-promoting or rescheduling.
+**Stuck project check:** if the NEXT step has a SCHEDULED date in the past and hasn't
+moved, the project is stuck. This requires an explicit decision — not a reschedule by
+default:
+- **Re-activate:** new NEXT with a realistic date. Only if it's actually happening.
+- **PAUSED:** mark the parent PAUSED with a note on why. Removes it from active view.
+- **ABANDONED:** mark ABANDONED. Projects drift and stop — this names it honestly.
+
+Drift without a decision is not an option. A stuck project that stays in Active creates
+false load and erodes trust in the system.
 
 ---
 
