@@ -20,9 +20,15 @@ Pre-decided at the work signoff (good energy, right moment). Confirmed at mornin
 
 1. Work priorities: check Sunsama / sprint board. Externally decided — this is a lookup.
 2. Personal Highlight: confirm what was pre-decided at yesterday's work signoff.
-3. Sanity check: does this fit the fixed commitments today?
+3. Open your daily planning view: arrange pre-scheduled personal tasks into available
+   calendar gaps. This is arrangement, not decision — tasks were already scheduled at
+   work signoff.
+4. Sanity check: does the day fit? The planning view shows this visually.
 
-Zero fresh decisions. Both priority streams are pre-decided.
+Zero fresh decisions. Both priority streams are pre-decided. Tasks without a scheduled
+date won't appear in the planning view — that's a signal the work signoff step was skipped.
+
+/(Current implementation: org-timeblock in Emacs.)/
 
 ---
 
@@ -39,7 +45,9 @@ Two-part ritual:
 **Part 1 — sweep (non-negotiable):** Scan email/Slack for anything to capture. Mark what
 got done. Explicitly migrate or drop incomplete items. Preview tomorrow's calendar —
 can't set a realistic Highlight without knowing what's fixed. Set tomorrow's personal
-Highlight. This is the right moment for next-day decisions — energy and context are good.
+Highlight. **Schedule personal tasks for the evening or the next personal day** — set
+scheduled dates so they appear in the daily planning view at morning planning. This is the
+right moment for next-day decisions — energy and context are good.
 
 **Part 2 — context break:** Do something that makes re-entering work require active effort
 rather than passive drift. WFH removes the forced transition a commute provides — this

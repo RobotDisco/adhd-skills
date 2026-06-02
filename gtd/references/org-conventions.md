@@ -8,6 +8,19 @@
 | `:Effort:` | Every item in `* Active` at the moment of scheduling — not at capture time |
 | `DEADLINE:` | Only for true external deadlines (someone else cares about this date) |
 
+**SCHEDULED vs DEADLINE semantics:**
+
+- `SCHEDULED:` serves two purposes: (1) allocating a specific day to work on something,
+  and (2) deferring a task to the earliest date it can reasonably be started. Both uses
+  are correct — the date means "don't show me this before now, and this is when I plan
+  to work on it."
+- `DEADLINE:` = hard external commitment. Someone else cares about this date: a bill, a
+  tax filing, a commitment made to another person. Missing it has consequences outside
+  your control.
+- Self-imposed "I'd like to finish this by X" targets are **not** deadlines — they are
+  scheduling preferences. Use `SCHEDULED:` and move the date if priorities shift.
+  Reserving `DEADLINE:` for genuine external commitments keeps the list trustworthy.
+
 Phantom date tags like `:1week:`, `:1month:`, `:6month:` are forbidden — org-agenda ignores
 them, giving false confidence the system is tracking something it isn't. Convert to real
 `DEADLINE:` or drop.

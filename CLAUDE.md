@@ -191,7 +191,7 @@ requirements."** Only add a tag when one of these is true:
 One place, no processing, no tags, no scheduling — just dump it.
 
 ### Work signoff (~5pm) — "work brain off"
-Two parts: (1) sweep — scan for anything to capture, mark done, preview tomorrow's calendar, set tomorrow's Highlight; (2) context break — do something that makes re-entering work require active effort, not passive drift. The sweep earns the closure; the context break enforces it.
+Two parts: (1) sweep — scan for anything to capture, mark done, preview tomorrow's calendar, set tomorrow's Highlight, **schedule personal tasks for the evening or the next personal day** (sets a date so they appear in tomorrow's daily planning view); (2) context break — do something that makes re-entering work require active effort, not passive drift. The sweep earns the closure; the context break enforces it.
 
 ### Evening sweep (~9pm) — "whole day captured, brain is free"
 Capture only — review journal, brain dump to inbox, confirm tomorrow's Highlight if not already set. No planning, no next-day decisions. Earns the completion signal (going to bed).
@@ -200,16 +200,19 @@ Capture only — review journal, brain dump to inbox, confirm tomorrow's Highlig
 
 ### Morning planning (~10 min)
 Zero fresh decisions — both priority streams are pre-decided:
-1. Work: check sprint board / task manager. Priorities are externally set — this is a lookup, not a decision. In sprint-based environments, the Highlight is never a work task; work is already decided.
+1. Work: check sprint board / task manager. Priorities are externally set — this is a lookup, not a decision.
 2. Personal: confirm yesterday's Highlight (pre-decided at work signoff). One self-directed win.
-3. Items without effort estimates get one now.
-4. Sanity check: does this fit between today's fixed commitments?
+3. Open your daily planning view: arrange pre-scheduled personal tasks into available
+   calendar gaps. This is arrangement, not decision — tasks were scheduled at work signoff.
+4. Sanity check: does the day fit? The planning view shows this visually.
+   /(Current implementation: org-timeblock in Emacs.)/
 
 ### Weekly review
 1. Inbox to zero.
-2. On-deck audit — items that didn't move this week → demote to Someday.
-3. Someday audit — items ready now → promote to on-deck with a date. Stale items → archive or delete.
-4. Archive all completed and cancelled items.
+2. Active audit — items that didn't move this week → demote to Someday.
+3. Someday audit — items ready now → promote to Active with a rough date this week. Stale items → archive or delete. **Output must be a concrete pool of Active items, not just a status check.**
+4. Project health — each project must have exactly one NEXT action scheduled for the week.
+5. Archive all completed and cancelled items.
 
 ---
 
