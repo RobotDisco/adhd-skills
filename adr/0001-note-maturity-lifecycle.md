@@ -52,5 +52,7 @@ systems fail when the maintenance cost of the system exceeds the value it produc
 - The weekly review scans for `:fleeting:` notes as the primary triage target.
 - A large fleeting backlog is a system maintenance issue, not a personal failure.
 - Permanent notes are the measure of the system's health — not note count overall.
+- ADR 0019 extends this model: it defines the quality bar for graph membership, adds
+  `:runbook:` as a non-maturity note kind, and establishes the journal boundary rule.
 - *(Current implementation: tags `:fleeting:`, `:literature:`, `:permanent:` as org-mode
   FILETAGS in org-roam. A note may carry multiple tags during transit between stages.)*

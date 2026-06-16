@@ -5,10 +5,15 @@
 
 ## Context
 
-The brain repo (~2,500 notes) uses org-roam across multiple lifecycle stages (`:fleeting:`,
-`:literature:`, `:permanent:`, `:resource:`, `:runbook:`). Without explicit quality criteria, the graph
-fills with half-formed captures that look like knowledge but aren't: topic stubs, aspiration
-entries ("I should learn X"), and notes with no connections to anything else. These don't
+ADR 0001 established the three-stage note maturity lifecycle (fleeting, literature,
+permanent) and the reasoning for why distinct stages are needed. It did not define what
+makes a note ready to enter the graph at any stage, nor did it account for note kinds
+beyond the three maturity stages (procedures, people, projects, areas).
+
+The brain repo (~2,500 notes) uses org-roam across these lifecycle stages plus additional
+kinds (`:resource:`, `:runbook:`). Without explicit quality criteria, the graph fills with
+half-formed captures that look like knowledge but aren't: topic stubs, aspiration entries
+("I should learn X"), and notes with no connections to anything else. These don't
 participate in synthesis — they are dead weight with the appearance of a system.
 
 A secondary question: journal files are the daily capture/log layer. They could technically
@@ -141,3 +146,5 @@ has been properly processed. Without it, "processed" has no definition.
   `:literature:`, `:permanent:`, `:runbook:`).
 - Existing `:resource:` notes are migrated opportunistically during weekly review encounters,
   not in a bulk sweep. Bulk sweeps stall; opportunistic migration accumulates.
+- This ADR extends ADR 0001 — it does not replace it. ADR 0001 remains the canonical
+  definition of the three-stage maturity lifecycle and the reasoning behind it.
