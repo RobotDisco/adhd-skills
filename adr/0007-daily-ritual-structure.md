@@ -1,4 +1,4 @@
-# 0005: Daily ritual structure and decision timing
+# 0007: Daily ritual structure and decision timing
 
 **Date**: 2026-05-31
 **Status**: Accepted

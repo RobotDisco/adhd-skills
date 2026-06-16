@@ -1,4 +1,4 @@
-# 0011: Weekly review ritual — full sweep checklist
+# 0018: Weekly review ritual — full sweep checklist
 
 **Date**: 2026-06-08
 **Status**: Accepted
@@ -23,7 +23,7 @@ before reviewing the rest of the system.
 
 ### 2. Routine / Habits audit
 - Check `LAST_REPEAT` dates. Any habit lapsed 2+ weeks: is it still a real commitment?
-  Apply the stuck-project intervention policy (ADR 0010) — re-activate, PAUSED, or remove.
+  Apply the stuck-project intervention policy (ADR 0012) — re-activate, PAUSED, or remove.
 - No stale habits should sit silently in Routine.
 
 ### 3. Tickler
@@ -39,7 +39,7 @@ For every item in Active:
 - DOING items: still in flight? If stalled, back to NEXT or demote.
 
 **Projects (ACTIVE/PAUSED):**
-- Does every project have a NEXT sub-item? If not, it is stuck — apply ADR 0010.
+- Does every project have a NEXT sub-item? If not, it is stuck — apply ADR 0012.
 - Does every project have a Goal and Ramification in its body? Add if missing.
 - Check deadlines — anything due soon that needs a schedule change or escalation?
 - PAUSED projects: is the pause still intentional? Still valid to return to?

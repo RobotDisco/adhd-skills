@@ -1,4 +1,4 @@
-# 0010: Stuck project intervention policy — no drift
+# 0012: Stuck project intervention policy — no drift
 
 **Date**: 2026-06-01
 **Status**: Accepted

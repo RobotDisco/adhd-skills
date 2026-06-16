@@ -1,11 +1,11 @@
-# 0013: Brain/knowledge step in weekly review
+# 0020: Brain/knowledge step in weekly review
 
 **Date**: 2026-06-15
 **Status**: Accepted
 
 ## Context
 
-ADR 0011 defines the weekly review ritual as a GTD-only sweep (inbox triage → habits →
+ADR 0018 defines the weekly review ritual as a GTD-only sweep (inbox triage → habits →
 tickler → active board → someday → housekeeping). The brain repo (org-roam zettelkasten)
 has its own weekly template (`brain/templates/weekly.org`) with a "Random Note Encounter"
 and reflection prompts, but this has not been integrated with the GTD review into a single
@@ -31,9 +31,9 @@ and never reaching the GTD audit.
 ### The brain step has two parts
 
 **1. Random note encounter (3 minutes)**
-Open a random non-journal node via `C-c n r`. The filter (ADR 0012) excludes file-level
+Open a random non-journal node via `C-c n r`. The filter (ADR 0019) excludes file-level
 `:journal:` nodes; all other nodes are fair game. Spend up to 3 minutes with whatever
-surfaces. The judgment question is: does this note meet the quality bar from ADR 0012?
+surfaces. The judgment question is: does this note meet the quality bar from ADR 0019?
 If not, it needs sharpening, linking, or deletion — note that for now and move on.
 This is not a rewrite session.
 
@@ -47,7 +47,7 @@ makes reflection valuable. Prompts (from the existing weekly template):
 - What felt good about this week?
 - What should I prioritize next week?
 
-### Amended weekly review order (supersedes ADR 0011 step ordering)
+### Amended weekly review order (supersedes ADR 0018 step ordering)
 
 1. Inbox triage (`gtd-triage` skill) — prerequisite
 2. GTD sweep (`gtd-review` skill) — habits, tickler, active board, someday, housekeeping
@@ -69,7 +69,7 @@ pattern recognition the weekly review is designed to develop.
 
 ## Consequences
 
-- ADR 0011 is amended: the weekly review now has a brain step as phase 3.
+- ADR 0018 is amended: the weekly review now has a brain step as phase 3.
 - A `brain-weekly-review` skill (or a top-level `weekly-review` skill) should implement
   the random note encounter prompt and the reflection sequence.
 - The `C-c n r` keybinding in Emacs is the mechanism for the random note encounter —

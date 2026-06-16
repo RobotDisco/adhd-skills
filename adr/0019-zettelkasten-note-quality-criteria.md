@@ -1,4 +1,4 @@
-# 0012: Zettelkasten note quality criteria and journal boundary
+# 0019: Zettelkasten note quality criteria and journal boundary
 
 **Date**: 2026-06-15
 **Status**: Accepted
@@ -133,7 +133,7 @@ has been properly processed. Without it, "processed" has no definition.
   change is needed if the journal-no-nodes rule is followed — heading-level journal nodes
   will not exist.
 - The "does this note meet the bar?" question above is the core judgment in the brain
-  weekly review step (see ADR 0013).
+  weekly review step (see ADR 0020).
 - Aspiration notes without concrete claims should be flagged during triage and either
   sharpened into a claim or deleted.
 - The lifecycle tag requirement means every note has an explicit processing state or kind —
