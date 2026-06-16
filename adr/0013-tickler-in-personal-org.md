@@ -14,7 +14,7 @@ different thing — more of a periodic review scaffold than a date-based resurfa
 
 ## Decision
 
-Tickler items live in a `* Tickler` section within `personal.org`, alongside `* Habits`,
+Tickler items live in a `* Tickler` section within `personal.org`, alongside `* Routine`,
 `* Active`, and `* Someday`.
 
 The mechanism is a `SCHEDULED:` date, but the semantics differ from Active: the scheduled

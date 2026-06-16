@@ -13,7 +13,7 @@ see fixed calendar blocks and drag tasks into free slots until the day was full.
 The org-mode equivalent needed evaluation. Two candidates:
 
 1. **org-agenda with org-super-agenda** — a custom "D" agenda command grouping today's
-   tasks by section (Calendar, Overdue, Today, Habits, Waiting). Grouped list view,
+   tasks by section (Calendar, Overdue, Today, Routine, Waiting). Grouped list view,
    no visual fit-check against calendar gaps.
 
 2. **org-timeblock** — a dedicated buffer showing a visual day timeline with calendar

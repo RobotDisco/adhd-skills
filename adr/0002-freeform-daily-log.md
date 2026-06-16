@@ -58,5 +58,5 @@ it's the structure that changed, not the commitment.
 - The weekly review mines the week's journal entries for permanent note seeds, promotes
   fleeting notes, and checks the GTD system. The daily log feeds this; it does not replace it.
 - *(Current implementation: daily journal entries in `notes/journal/YYYY/MM/YYYY-MM-DD.org`,
-  freeform bullet entries. No evening template file exists — the structured template was
-  never built, which is itself evidence of how the decision resolved.)*
+  freeform bullet entries. The evening template `templates/evening.org` exists but is
+  not the load-bearing mechanism — it remains available for deliberate use when energy allows.)*

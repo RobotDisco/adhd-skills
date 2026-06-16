@@ -50,7 +50,7 @@ For every item in Active:
 - Keep the list honest — Someday is not a graveyard.
 
 ### 6. Housekeeping
-- Delete DONE items from `inbox.org` (not archived — Syncthing history is the safety net).
+- Delete DONE items from `inbox.org` (not archived — Seafile file history is the safety net).
 - Archive DONE/CANCELLED items from Active (via `org-archive-subtree`).
 - Resolve and delete any `SFConflict` files.
 
