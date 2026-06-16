@@ -14,13 +14,38 @@ a general-purpose toolkit.
 
 Skills for GTD task management.
 
-#### `inbox-triage`
+#### `gtd-triage`
 
 Works through a captured inbox one item at a time, makes a routing decision (on-deck,
 someday, work tool, waiting, or delete), and produces a grouped summary to act on.
 
 Triggers automatically when you say things like *"let's go through my inbox"*, *"GTD
 sweep"*, or *"process my inbox"*.
+
+#### `gtd-review`
+
+Interactive GTD system health check. Audits habits, tickler, active board, and someday.
+Ensures every commitment is honest and every project has a live next action.
+
+Triggers automatically when you say things like *"GTD review"*, *"weekly review"*, or
+*"how does my system look"*.
+
+### `brain`
+
+Skills for org-roam knowledge management.
+
+#### `brain-weekly-review`
+
+Weekly zettelkasten review. Assesses one random note for zettelkasten shape (with
+per-kind criteria for permanent, literature, runbook, person, business, project, and
+area notes), then guides a structured reflection on the week. Surfaces one recurring
+thread from your answers at the end.
+
+Runs standalone — does not require the GTD review to have run first. In the full weekly
+ritual, runs after `gtd-triage` and `gtd-review`.
+
+Triggers automatically when you say things like *"brain review"*, *"weekly brain"*, or
+*"knowledge review"*.
 
 ## Installation
 
@@ -43,7 +68,7 @@ Skills activate immediately — no restart needed.
 ## Adding a skill
 
 Skills are organised by domain — `gtd/` for task management, `brain/` for knowledge
-management (coming), and so on. Each domain is its own installable plugin.
+management, and so on. Each domain is its own installable plugin.
 
 Use the `/skill-creator` skill to add a new skill to an existing domain, or create a new
 domain directory and register it in `.claude-plugin/marketplace.json`.

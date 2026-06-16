@@ -248,7 +248,13 @@ adhd-skills/
 │           ├── SKILL.md
 │           └── references/    ← optional: lookup tables, examples
 │               └── *.md
-└── <domain>/                  ← future domains (e.g. brain/)
+├── brain/                     ← /plugin install brain@adhd-skills
+│   └── skills/
+│       └── <skill-name>/
+│           ├── SKILL.md
+│           └── references/
+│               └── *.md
+└── <domain>/                  ← future domains
     └── skills/
         └── ...
 ```
@@ -264,8 +270,8 @@ If it's a new domain, also register it in `.claude-plugin/marketplace.json`.
 ### Skill naming convention
 
 Use a domain prefix when the noun is generic enough to be ambiguous across domains.
-In practice, all GTD skills use `gtd-*` (e.g. `gtd-triage`, `gtd-review`). Future
-brain skills would use `brain-*`. This prevents namespace collisions (e.g. "inbox"
+In practice, all GTD skills use `gtd-*` (e.g. `gtd-triage`, `gtd-review`). Brain
+skills use `brain-*` (e.g. `brain-weekly-review`). This prevents namespace collisions (e.g. "inbox"
 could mean GTD inbox or email inbox).
 
 ### Authoring notes
