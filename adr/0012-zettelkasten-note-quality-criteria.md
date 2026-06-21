@@ -46,7 +46,8 @@ get deferred and the ones that matter most. When a note feels stuck, assume the 
 
 The right grain is the one that lets you link to exactly the idea you mean, no more. The
 test is not word count — it is: *will I ever want to link to this idea without the others
-around it?* If yes, it is its own atom.
+around it?* If yes, it is its own atom. (Same "not size" logic as project granularity in
+[[0008]] — knowledge/connection value, not count, decides what earns its own node.)
 
 ### When notes cluster: hub-and-spokes, not collapse
 

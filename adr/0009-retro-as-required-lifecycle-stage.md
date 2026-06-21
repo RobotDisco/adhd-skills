@@ -48,5 +48,6 @@ layer and the execution layer decouple, defeating the purpose of keeping them li
   done and the easiest to close out.
 - A RETRO NEXT looks like: "Write outcome + harvest permanent notes from [project node]."
   It is scheduled and effort-estimated like any other NEXT.
+- Harvested permanent notes should clear the note-quality bar — see [[0012]].
 - *(Current implementation: `RETRO` state in the org-mode project TODO sequence.
   RETRO projects surface in `C-c a #` stuck-projects view if they have no NEXT subtask.)*
