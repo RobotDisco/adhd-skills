@@ -1,4 +1,4 @@
-# 0006: Personal time success metric
+# 0008: Personal time success metric
 
 **Date**: 2026-05-31
 **Status**: Accepted

@@ -10,6 +10,11 @@
       "name": "gtd",
       "description": "GTD task management skills",
       "source": "./gtd"
+    },
+    {
+      "name": "brain",
+      "description": "Org-roam knowledge management skills",
+      "source": "./brain"
     }
   ]
 }

@@ -208,11 +208,8 @@ Zero fresh decisions — both priority streams are pre-decided:
    /(Current implementation: org-timeblock in Emacs.)/
 
 ### Weekly review
-1. Inbox to zero.
-2. Active audit — items that didn't move this week → demote to Someday.
-3. Someday audit — items ready now → promote to Active with a rough date this week. Stale items → archive or delete. **Output must be a concrete pool of Active items, not just a status check.**
-4. Project health — each project must have exactly one NEXT action scheduled for the week.
-5. Archive all completed and cancelled items.
+Full ritual order: `gtd-triage` → `gtd-review` → `brain-weekly-review`. Each is a
+standalone skill. Run them in sequence in one session. Detail in ADRs 0011 and 0013.
 
 ---
 
@@ -248,7 +245,13 @@ adhd-skills/
 │           ├── SKILL.md
 │           └── references/    ← optional: lookup tables, examples
 │               └── *.md
-└── <domain>/                  ← future domains (e.g. brain/)
+├── brain/                     ← /plugin install brain@adhd-skills
+│   └── skills/
+│       └── <skill-name>/
+│           ├── SKILL.md
+│           └── references/
+│               └── *.md
+└── <domain>/                  ← future domains
     └── skills/
         └── ...
 ```
@@ -264,8 +267,8 @@ If it's a new domain, also register it in `.claude-plugin/marketplace.json`.
 ### Skill naming convention
 
 Use a domain prefix when the noun is generic enough to be ambiguous across domains.
-In practice, all GTD skills use `gtd-*` (e.g. `gtd-triage`, `gtd-review`). Future
-brain skills would use `brain-*`. This prevents namespace collisions (e.g. "inbox"
+In practice, all GTD skills use `gtd-*` (e.g. `gtd-triage`, `gtd-review`). Brain
+skills use `brain-*` (e.g. `brain-weekly-review`). This prevents namespace collisions (e.g. "inbox"
 could mean GTD inbox or email inbox).
 
 ### Authoring notes

@@ -1,4 +1,4 @@
-# 0003: State flag over a dedicated waiting collection
+# 0005: State flag over a dedicated waiting collection
 
 **Date**: 2026-05-26
 **Status**: Accepted

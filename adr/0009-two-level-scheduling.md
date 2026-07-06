@@ -1,4 +1,4 @@
-# 0007: Two-level scheduling — weekly and daily
+# 0009: Two-level scheduling — weekly and daily
 
 **Date**: 2026-06-01
 **Status**: Accepted

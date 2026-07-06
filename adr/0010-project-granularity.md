@@ -1,4 +1,4 @@
-# 0008: Project granularity — when a project earns an org-roam node
+# 0010: Project granularity — when a project earns an org-roam node
 
 **Date**: 2026-06-01
 **Status**: Accepted

@@ -1,4 +1,4 @@
-# 0001: Inbox archival policy
+# 0003: Inbox archival policy
 
 **Date**: 2026-05-26
 **Status**: Accepted

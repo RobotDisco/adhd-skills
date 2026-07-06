@@ -1,4 +1,4 @@
-# 0002: Project two-layer model
+# 0004: Project two-layer model
 
 **Date**: 2026-05-26
 **Status**: Accepted

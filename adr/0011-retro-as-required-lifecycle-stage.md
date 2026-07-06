@@ -1,4 +1,4 @@
-# 0009: RETRO is a required project lifecycle stage
+# 0011: RETRO is a required project lifecycle stage
 
 **Date**: 2026-06-01
 **Status**: Accepted
@@ -21,7 +21,7 @@ cannot move to COMPLETED without passing through RETRO.
 
 RETRO has a specific obligation: harvest learnings into the zettelkasten, link permanent
 notes produced by the project, and write the project outcome. This requires an explicit
-NEXT action — RETRO without a NEXT is stuck (see ADR 0010).
+NEXT action — RETRO without a NEXT is stuck (see ADR 0012).
 
 The lifecycle is: PLAN → ACTIVE → RETRO → COMPLETED (or ABANDONED at any point).
 

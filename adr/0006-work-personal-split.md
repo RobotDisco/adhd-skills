@@ -1,4 +1,4 @@
-# 0004: Work/personal task split
+# 0006: Work/personal task split
 
 **Date**: 2026-05-26
 **Status**: Accepted
