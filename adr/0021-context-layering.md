@@ -1,4 +1,4 @@
-# 0013: Context layering — where GTD/zettelkasten guidance lives
+# 0021: Context layering — where GTD/zettelkasten guidance lives
 
 **Date**: 2026-06-21
 **Status**: Proposed
@@ -19,7 +19,7 @@ for what goes where:
 Two problems result:
 
 1. **Duplication / drift.** The same material now lives in more than one place. Example:
-   the note-quality criteria are in both `brain/CLAUDE.md` and ADR 0012. Each copy is a
+   the note-quality criteria are in both `brain/CLAUDE.md` and ADR 0019. Each copy is a
    place the guidance can silently diverge.
 2. **Location dependence.** Project `CLAUDE.md` only loads when Claude starts inside that
    repo's tree. Starting elsewhere means the posture and guardrails are absent — even

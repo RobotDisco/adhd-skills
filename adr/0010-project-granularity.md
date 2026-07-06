@@ -57,4 +57,4 @@ connects to the rest of the zettelkasten.
   moved. The intervention is explicit: re-activate (new NEXT + date), PAUSED (with a
   note on why), or ABANDONED. Drift without a decision is not an option.
 - The same "knowledge value, not size" logic governs note *atomicity* at the grain level —
-  see [[0012]].
+  see [[0019]].

@@ -1,16 +1,16 @@
-# 0015: The journal is a one-way fleeting feed — linking is a graph rule, not a journal rule
+# 0023: The journal is a one-way fleeting feed — linking is a graph rule, not a journal rule
 
 **Date**: 2026-06-21
 **Status**: Accepted
 
 ## Context
 
-The daily journal is the life-record and fleeting-capture layer (cf. [[0005]]'s evening
-sweep; mined in [[0011]]'s weekly review). A question keeps resurfacing *during* review:
+The daily journal is the life-record and fleeting-capture layer (cf. [[0007]]'s evening
+sweep; mined in [[0018]]'s weekly review). A question keeps resurfacing *during* review:
 should journal entries be wired into the zettelkasten graph — links between consecutive
 days, or back-links from an extracted permanent note to the journal entry it came from?
 
-The pull is real because [[0012]] makes link-discoverability a first-class obligation: an
+The pull is real because [[0019]] makes link-discoverability a first-class obligation: an
 unlinked permanent note "functionally doesn't exist," so the instinct is to apply the same
 discipline everywhere. Left unstated, the question gets re-litigated every few weeks — each
 time costing the same re-derivation, and each time tempting an open-ended "link all my days
@@ -26,7 +26,7 @@ capture value has been extracted, not a node to be cultivated.
 Linking discipline is therefore **asymmetric**:
 
 - **Permanent / literature graph** — links are first-class. Object permanence applies
-  ([[0012]]): an unlinked note doesn't exist, so connections are worth the investment.
+  ([[0019]]): an unlinked note doesn't exist, so connections are worth the investment.
 - **Journal** — links are *not* a practice. Don't link days to each other; don't back-link
   extracted notes to their journal origin.
 
@@ -62,9 +62,9 @@ standing tax.
 
 ## Consequences
 
-- Weekly review ([[0011]]) is the *only* point where the journal connects to the graph, and
+- Weekly review ([[0018]]) is the *only* point where the journal connects to the graph, and
   it does so by **extraction** (promoting atoms into the permanent layer), not by linking.
-- Object permanence ([[0012]]) is hereby scoped: it is a property of the *permanent graph*,
+- Object permanence ([[0019]]) is hereby scoped: it is a property of the *permanent graph*,
   not of every `.org` file in the repo.
 - Decision heuristic when unsure whether content belongs in the graph or just reachable from
   it: if it's date-indexed and searchable, a link adds nothing — leave it in the journal.

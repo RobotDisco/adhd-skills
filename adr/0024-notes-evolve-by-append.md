@@ -1,4 +1,4 @@
-# 0016: Notes evolve by append, not rewrite — preserve prior thinking, link to updates
+# 0024: Notes evolve by append, not rewrite — preserve prior thinking, link to updates
 
 **Date**: 2026-06-21
 **Status**: Accepted
@@ -53,7 +53,7 @@ Add an explicit inline update *only* when it does something the undirected backl
 
 - **Corrects a now-false assertion** in the note's own *text* (a backlink shows a referrer;
   it does not fix what the note says it concluded). This is about standalone-accuracy
-  (cf. [[0012]] criterion 5).
+  (cf. [[0019]] criterion 5).
 - **Names the relationship** — "resolved by", "superseded by", "complicated by" — which a
   bare backlink ("something links here") cannot express.
 
@@ -64,7 +64,7 @@ erases the tension/struggle that is itself data.
 
 **Leave the old note stale** — rejected. The note then asserts something false in its own
 text (e.g. "I don't know how to resolve this" after you have). A reader of the prose, not
-the backlink panel, reaches a wrong conclusion — it fails standalone-accuracy ([[0012]] #5).
+the backlink panel, reaches a wrong conclusion — it fails standalone-accuracy ([[0019]] #5).
 
 **Strict Luhmann immutability (never touch a note)** — rejected as over-applied. It is
 partly a paper artifact, and on its own it leaves the staleness problem unsolved. Append
@@ -77,9 +77,9 @@ reverse-discoverability; mirror only to correct text or name a relationship (abo
 
 - The atomic unit of revision is the **append**, not the edit. Updates are marked and dated
   so the arc is legible.
-- Relates to [[0012]]: a stale note fails criterion 5 (standalone, understandable); the
+- Relates to [[0019]]: a stale note fails criterion 5 (standalone, understandable); the
   append is how you fix that without destroying history.
-- Distinct from [[0015]]: the *journal* is a one-way fleeting husk that is not revised at all
+- Distinct from [[0023]]: the *journal* is a one-way fleeting husk that is not revised at all
   (value is extracted out of it, not appended back in). This ADR governs the *permanent
   graph*, where notes are long-lived and do get revisited.
 - `brain/CLAUDE.md` can reference this where it discusses note lifecycle/quality.

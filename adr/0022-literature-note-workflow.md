@@ -1,4 +1,4 @@
-# 0014: Literature note workflow — capture container, atomic graduation
+# 0022: Literature note workflow — capture container, atomic graduation
 
 **Date**: 2026-06-21
 **Status**: Accepted
@@ -38,7 +38,7 @@ well, not as separate steps. The `* Capture` heading is also the org-noter root.
 Personal reactions are caught inline as `[insight: ...]` — integration captured the moment
 it sparks. Selected atoms (insights + any answer that is the user's *own claim*) **graduate
 into standalone `:permanent:` notes**. This graduation is the comprehension→integration
-step (cf. [[0012]]) — and the user's known bottleneck — so the Reflection cue places the
+step (cf. [[0019]]) — and the user's known bottleneck — so the Reflection cue places the
 prompt exactly where the friction is.
 
 The dividing line for headline-vs-file is **authorship, not importance**. A point from the
@@ -64,7 +64,7 @@ but "whose claim is this?"
 ### Tagging
 New literature notes default to `:literature:fleeting:`; `:fleeting:` is shed once the note
 is processed/graduated — the provenance (`:literature:`) vs. maturity (`:fleeting:`)
-rationale lives in [[0012]].
+rationale lives in [[0019]].
 
 ### Unity placement
 Deliberately filed under Reflection, not Orientation (where Adler puts it). You can only
@@ -79,7 +79,7 @@ friction, blank sections).
 **Fragment into a separate literature-note file per key point** — rejected. Atomic points
 live as headings-with-IDs *inside* the container (low friction, still linkable); separate
 files are reserved for the `:permanent:` graduation layer. Atomicity is about linkability,
-not file count (cf. [[0012]]).
+not file count (cf. [[0019]]).
 
 **Pure capture container, no reflection prompts** — rejected; loses Adler's genuinely
 useful critical questions.
@@ -92,7 +92,7 @@ comments under a findable `* Reflection` heading: structure without obligation.
 - `templates/literature.org` rewritten to Orientation / Capture / Reflection.
 - The Orientation `Kind` cue is the only fillable prompt — a deliberate experiment. If it
   goes unfilled across several sources, demote it to a comment-cue.
-- Relationship to [[0012]]: this is the literature→permanent pipeline. The seven-point bar
+- Relationship to [[0019]]: this is the literature→permanent pipeline. The seven-point bar
   applies to *graduated permanent notes*; literature atoms are atomic-but-faithful.
 - Validation is empirical and only the user can run it: does the next source fill this more
   naturally than the old template did?
