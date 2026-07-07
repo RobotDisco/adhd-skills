@@ -97,4 +97,4 @@ on how each one shapes the decisions made here.
 
 ## License
 
-GPLv3. See [LICENSE](LICENSE).
+Creative Commons Attribution-ShareAlike 4.0 International. See [LICENSE](LICENSE).
