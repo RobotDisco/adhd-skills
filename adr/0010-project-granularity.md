@@ -56,3 +56,5 @@ connects to the rest of the zettelkasten.
 - A project is **stuck** when its NEXT step has a SCHEDULED date in the past and hasn't
   moved. The intervention is explicit: re-activate (new NEXT + date), PAUSED (with a
   note on why), or ABANDONED. Drift without a decision is not an option.
+- The same "knowledge value, not size" logic governs note *atomicity* at the grain level —
+  see [[0019]].
