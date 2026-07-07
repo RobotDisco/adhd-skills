@@ -42,7 +42,7 @@ Distinctive angle: Dr. K bridges clinical psychiatry with how ADHD actually mani
 modern, screen-heavy, dopamine-rich environments. Useful where Barkley gives the
 neurological model and this system needs the behavioural translation layer.
 
-Not yet worked through directly — on the list.
+Worked through directly.
 
 ---
 
@@ -55,6 +55,8 @@ the "this is actually an ADHD thing, not a character flaw" reframes originate.
 
 Contributions to this system: capture-anywhere reflex, reducing friction as the primary
 intervention, and the framing of system failures as design problems rather than user failures.
+
+Watched directly — an ongoing channel, so this reflects episodes seen, not a fixed corpus.
 
 ---
 
@@ -75,14 +77,15 @@ Applied here: when a triage session stalls because the user is trying to figure 
 the perfect system before processing a single item, the Midwest Magic heuristic applies —
 start moving things, the shape of the system becomes clear in motion.
 
+Watched directly — an ongoing channel, so this reflects episodes seen, not a fixed corpus.
+
 ---
 
-## Jesse J. Anderson — *Extra Focus* / ADHD Motivation Mastery
+## Jesse J. Anderson — ADHD Motivation Mastery (course)
 
-[Extra Focus](https://www.extrafocusbook.com/) · [ADHD Motivation Mastery course](https://www.adhdmotivationmastery.com/)
+[ADHD Motivation Mastery](https://www.adhdmotivationmastery.com/)
 
-Book (*Extra Focus: The Quick Start Guide to Adult ADHD*) and a course ("ADHD Motivation
-Mastery"). The book has been leaned on; "Mastering Motivation" is likely the course.
+The course "ADHD Motivation Mastery" is the influence here — taken directly.
 
 Key idea: ADHD motivation doesn't run on importance or willpower — it runs on specific
 triggers. His **4 Cs framework**: Challenge, Competition, Creativity, Completion. If an
@@ -128,13 +131,16 @@ Applied here: any project entry without a clear outcome *and* a timeframe is a
 placeholder, not a plan. The weekly review should surface these and either add the
 missing ingredient or demote the entry to Someday.
 
+Listened to directly — an ongoing podcast, so this reflects episodes heard, not a fixed corpus.
+
 ---
 
 ## Charles Conn & Robert McLean — *Bulletproof Problem Solving* (McKinsey)
 
 [bulletproofproblemsolving.com](https://bulletproofproblemsolving.com/)
 
-Not yet applied to this system — anticipated for the project decomposition workflow.
+Read directly, though not yet applied to this system — anticipated for the project
+decomposition workflow.
 
 Core method: MECE issue trees (Mutually Exclusive, Collectively Exhaustive), hypothesis-
 driven analysis, and prioritisation by impact rather than completeness. The discipline
@@ -143,3 +149,70 @@ proposing solutions.
 
 When the project decomposition skill is built, this is the primary reference for the
 decomposition step.
+
+---
+
+## Sönke Ahrens — *How to Take Smart Notes*
+
+[takesmartnotes.com](https://takesmartnotes.com/) · in `REFERENCES.bib` as `@ahrens2017HowTakeSmart`
+
+Read directly. The book that defines the zettelkasten method the note system implements.
+
+Core: the thinking happens in the *writing*, not in collecting; notes progress fleeting →
+literature → permanent, and the load-bearing move is restating a source's idea in your own
+words — the step that is easiest to skip and matters most.
+
+Shapes: ADR 0001 (note maturity lifecycle) and ADR 0019 (the seven-criteria quality bar —
+especially the comprehension→integration step, which is Ahrens' "write it in your own
+words" turned into a criterion).
+
+---
+
+## Mortimer Adler & Charles Van Doren — *How to Read a Book*
+
+[Wikipedia](https://en.wikipedia.org/wiki/How_to_Read_a_Book) · in `REFERENCES.bib` as `@adler2014HowReadBook`
+
+Read directly. The backbone of the literature-note workflow.
+
+Core: four levels of reading (elementary, inspectional, analytical, syntopical). Analytical
+reading means X-raying the structure, coming to terms with the author's key words, stating
+the book's unity, then judging it — and a fair critic must understand before agreeing or
+disagreeing. A book can fall short in exactly four ways: uninformed, misinformed,
+illogical, incomplete.
+
+Shapes: ADR 0022 (literature note workflow) end to end — its Orientation / Capture /
+Reflection stages mirror Adler's, and the Reflection cues *are* Adler's "state the unity,"
+his four failure modes, and "what of it?".
+
+---
+
+## Andy Matuschak — *Evergreen notes*
+
+[notes.andymatuschak.org](https://notes.andymatuschak.org/Evergreen_notes)
+
+Read directly (his public working notes / digital garden).
+
+Core: evergreen notes are atomic, densely linked, concept-oriented, and written to
+accumulate over time; prefer associative links between ideas over hierarchical
+categorisation; writing the notes *is* the thinking, not a record of it.
+
+Shapes: ADR 0019 ("prefer links to taxonomy; tags earn their place at critical mass") and
+ADR 0025 (tag axes — a link carries the *relationship*, a tag only set membership).
+
+---
+
+## Niklas Luhmann — *Communicating with Slip Boxes* (Zettelkasten originator)
+
+[luhmann.surge.sh](https://luhmann.surge.sh/) — English translation of "Kommunikation mit Zettelkästen"
+
+**Not read directly** — absorbed secondhand, via Ahrens and general zettelkasten discourse;
+the original Luhmann essay is on the list. Hold with less confidence than the others.
+
+Core: the slip-box functions as a communication/thinking partner; ideas gain value through
+links and branching numbers, and the record *accretes* rather than being overwritten. The
+often-cited "never change a note" is partly a genuine principle (don't destroy the record)
+and partly an artifact of the paper medium.
+
+Shapes: ADR 0024 (notes evolve by append, not rewrite) — which separates Luhmann's real
+principle from the paper artifact and reinterprets "preserve the record" as dated appends
+in a digital graph.

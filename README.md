@@ -86,10 +86,14 @@ on how each one shapes the decisions made here.
 | [Dr. K / HealthyGamerGG](https://coaching.healthygamer.gg/guide/modules/adhd) | Behavioural translation of clinical ADHD research for modern, screen-heavy environments |
 | [How to ADHD](https://www.youtube.com/@HowtoADHD) (Jessica McCabe) | Practical reframes: system failures as design bugs, not character flaws |
 | [Midwest Magic Cleaning](https://www.youtube.com/@MidwestMagicCleaning) (Jason) | The Fluid Method — start moving things, don't plan before you begin; applies to all messes |
-| [Jesse J. Anderson](https://www.extrafocusbook.com/) | 4 Cs motivation framework: ADHD runs on Challenge, Competition, Creativity, Completion |
+| [Jesse J. Anderson — ADHD Motivation Mastery](https://www.adhdmotivationmastery.com/) | 4 Cs motivation framework: ADHD runs on Challenge, Competition, Creativity, Completion |
 | [David Allen](https://gettingthingsdone.com/) — *Getting Things Done* | Structural backbone: one inbox, next physical action, someday/maybe |
 | [Developer Tea](https://developertea.com/) (Jonathan Cutrell) | A project needs a goal *and* a deadline — missing either, it's a dream |
 | [Conn & McLean](https://bulletproofproblemsolving.com/) — *Bulletproof Problem Solving* | MECE decomposition for the project breakdown workflow (not yet built) |
+| [Sönke Ahrens](https://takesmartnotes.com/) — *How to Take Smart Notes* | The zettelkasten method the note system implements: the fleeting → literature → permanent lifecycle, where rewriting a source's idea in your own words is the load-bearing act |
+| [Adler & Van Doren](https://en.wikipedia.org/wiki/How_to_Read_a_Book) — *How to Read a Book* | Backbone of the literature-note workflow: analytical reading (come to terms, state the unity, then judge) and the four ways a work can fall short |
+| [Andy Matuschak](https://notes.andymatuschak.org/Evergreen_notes) — *Evergreen notes* | Notes should be atomic, densely linked, and concept-oriented; prefer associative links over hierarchical tags |
+| [Niklas Luhmann](https://luhmann.surge.sh/) — *Communicating with Slip Boxes* | The slip-box originator; his "don't destroy the record" becomes "evolve by append, not rewrite" in a digital graph |
 
 ## License
 
