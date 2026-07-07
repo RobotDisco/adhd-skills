@@ -1,150 +1,153 @@
-# 0019: Zettelkasten note quality criteria and journal boundary
+# 0019: Zettelkasten note quality criteria — the bar a note must clear
 
 **Date**: 2026-06-15
+**Revised**: 2026-06-21 — expanded from four criteria to seven
 **Status**: Accepted
 
 ## Context
 
-ADR 0001 established the three-stage note maturity lifecycle (fleeting, literature,
-permanent) and the reasoning for why distinct stages are needed. It did not define what
-makes a note ready to enter the graph at any stage, nor did it account for note kinds
-beyond the three maturity stages (procedures, people, projects, areas).
+The brain repo holds ~2,500 notes, the majority still `:fleeting:` or unprocessed
+`:literature:`. Without a clear, testable bar for what makes a note "done," two failure
+modes recur: notes accumulate as clutter that is never elaborated, and elaboration that
+does happen stalls at faithful summary instead of reaching the writer's own claim.
 
-The brain repo (~2,500 notes) uses org-roam across these lifecycle stages plus additional
-kinds (`:resource:`, `:runbook:`). Without explicit quality criteria, the graph fills with
-half-formed captures that look like knowledge but aren't: topic stubs, aspiration entries
-("I should learn X"), and notes with no connections to anything else. These don't
-participate in synthesis — they are dead weight with the appearance of a system.
+This ADR extends [[0001]] (the three-stage maturity lifecycle): 0001 says what stages
+*exist*; this ADR says what makes a note ready to *enter the graph* at any stage, and adds
+`:runbook:` as a note kind outside the maturity ladder. `brain/CLAUDE.md` listed four
+criteria (atomic subject, self-retrieving title, at least one link, lifecycle tag) without
+a written rationale. This ADR is that rationale, and it expands the list to make the
+most-often-missed requirement explicit.
 
-A secondary question: journal files are the daily capture/log layer. They could technically
-contain org-roam heading nodes (level 1+). Allowing this blurs the boundary between "captured
-thought" and "processed knowledge," which is the distinction the weekly review is meant to
-enforce.
-
-This ADR applies across all active knowledge domains: hobby academia, hobby software
-development, life/ADHD management, professional software development, and hobby pursuits
-(coffee, etc.).
+The deeper observation behind it: the bottleneck is almost never structure (titles, tags,
+links — these come easily). It is the **comprehension→integration step** — moving from
+"what the source said" to "the claim I now hold." That step is the actual cognitive work a
+zettelkasten exists to produce, and it is the one most easily skipped.
 
 ## Decision
 
-### Necessary and sufficient qualities for an org-roam note
+### The bar — a note earns a place only if it clears all seven
 
-A note earns a place in the graph if and only if it satisfies **all** of:
+1. **Atomic** — one idea. If the note needs "and" to describe it, it is two notes.
+2. **Self-retrieving title** — a claim, not a topic label. You must recognise it as
+   relevant when searching months later.
+3. **At least one link** — ideally motivated by the ramification (#7). Zero links =
+   functionally does not exist.
+4. **Lifecycle tag** — one of the active FILETAGS.
+5. **In your own words, standalone** — understandable without the source or the
+   conversation that produced it. This is the integration act; a paraphrase or paste does
+   not satisfy it.
+6. **A claim** — it asserts something, not merely names a subject.
+7. **Ramification** — the "so what." May live in the body *or* be carried by the links
+   (a claim whose consequences are linked notes). A claim with neither stated consequence
+   nor consequential link is an assertion floating in space.
 
-1. **Atomic subject.** One thing. The title fully describes the scope. "V60 extraction" is a
-   note. "Coffee" is a folder concept. "Why my V60 tastes sour AND my workflow" is two notes.
+Criteria 1–4 are *structure*; 5–7 are *thinking*. The thinking criteria are the ones that
+get deferred and the ones that matter most. When a note feels stuck, assume the gap is at
+5–7, not the structure.
 
-2. **Title that retrieves itself.** You would recognise it as relevant when searching months
-   from now. For concept notes, a claim or question beats a topic label:
-   *"Under-extraction causes sourness regardless of bean"* retrieves better than
-   *"Coffee sourness"*.
+### Atomicity is about linkability, not size
 
-3. **At least one link.** To a source (for `:literature:` notes) or a related concept (for
-   `:permanent:` notes). A note with zero connections does not functionally exist in the
-   graph — object permanence applies to knowledge.
+The right grain is the one that lets you link to exactly the idea you mean, no more. The
+test is not word count — it is: *will I ever want to link to this idea without the others
+around it?* If yes, it is its own atom. (Same "not size" logic as project granularity in
+[[0010]] — knowledge/connection value, not count, decides what earns its own node.)
 
-4. **Lifecycle tag.** One of `:fleeting:`, `:literature:`, `:permanent:`, `:runbook:`.
-   Tells you what processing state or kind the note is in. (`:resource:` is a legacy tag
-   being migrated out — see below.)
+### When notes cluster: hub-and-spokes, not collapse
 
-Notes that fail:
-- Pure aspiration without a claim ("I should meditate more")
-- Topic labels broad enough to contain anything ("Software development")
-- Notes with no links and no tags
+Several specific claims that together support one general claim should be kept as separate
+atoms with a **structure note** over them — not collapsed into a single note. Collapsing
+reduces linkability: you can no longer point at one claim without dragging in the rest.
 
-### Additional quality for `:permanent:` notes
+The deciding question — **the link test**: *would I ever link to one of these without the
+other two?* Yes → keep them separate, add a structure note. No → they were one note all
+along; a single structure note with a comparison table is honest.
 
-Written in your own words, expressing your actual position or synthesis — not a paraphrase
-of a source. If a `:permanent:` note could be re-tagged `:literature:` without loss of
-meaning, it isn't permanent yet.
+### Structure notes are `:permanent:` plus a function — not a new tag
 
-### Additional quality for `:literature:` notes
+"Permanent" is a *lifecycle/maturity* answer; "structure note" is a *function* (hub vs.
+atomic claim). A structure note is a permanent note that happens to function as a hub, so
+it is tagged `:permanent:`. Do **not** create a `:structure:`/`:moc:` tag — its function is
+carried by its content (claim-title + link-dense table/list) and surfaced by org-roam
+backlinks. Revisit only if hub notes reach a critical mass with a genuine "show me all my
+maps of content" retrieval need.
 
-The "core claim in your words" field must be filled in. A literature note without this is
-unfinished.
+### Prefer links to taxonomy; tags earn their place at critical mass
 
-### `:runbook:` vs `:permanent:` — procedural vs declarative knowledge
+Following Matuschak: prefer associative links to hierarchical tags. A link carries the
+*relationship* ("X implies Y"); a tag only carries set membership. A topic tag that will
+only ever sit on a handful of notes (`:plan9:`, `:nix:`, `:git:` — the singleton tail in
+the current vocabulary) adds no discoverability a single link would not. Do not pre-create
+a tag for an anticipated future. A topic earns a tag — or better, a structure note — once
+it reaches the mass where you actually need to navigate it (cf. `:coffee:` at ~9, the one
+that earned it). The active FILETAGS are lifecycle/faceted, not subject taxonomy; keep them
+that way.
 
-These two kinds are distinct because they are retrieved and used differently:
+### `:runbook:` vs `:permanent:` — do you open it to *do*, or to *think*?
 
-- **`:runbook:`** — procedural knowledge: how to do something step by step. A V60 recipe,
-  an Istio setup guide, a morning planning checklist. You retrieve it to *execute*. It does
-  not need to be atomic or claim-titled; it can be a multi-step procedure or reference list.
-  The shape question is: is it findable from the task it serves, and is it still accurate?
+Two kinds of note are retrieved and used differently, so they carry different obligations:
 
-- **`:permanent:`** — declarative knowledge: a claim about how something works, expressed in
-  your own words. "Slower flow rate increases extraction yield." "Service meshes shift security
-  from application to infrastructure layer." You retrieve it to *think*. It must be atomic,
-  claim-titled, and linked to related concepts.
+- **`:runbook:`** — procedural knowledge you open to *execute*: a recipe, a setup guide, a
+  checklist. It need not be atomic or claim-titled; a multi-step procedure or reference
+  list is fine. The only tests are: is it findable from the task it serves, and is it still
+  accurate?
+- **`:permanent:`** — a declarative claim you open to *think* with. It must clear the seven
+  criteria above: atomic, claim-titled, linked.
 
-The test: would you open this note to *do* something, or to *think* about something?
+The test is one question: *would you open this note to do something, or to think about
+something?* A note titled "Low-caloric-density foods" is a lookup list — `:runbook:`.
+Rewrite the same knowledge as "Caloric density determines satiety per unit volume, not
+calories per serving" and it has become a claim — `:permanent:`.
 
-Notes that look like `:resource:` but have a claim hiding in them belong in `:permanent:`.
-A note titled "Low-caloric-density foods" is a `:runbook:` (a reference list). A note titled
-"Caloric density determines satiety per unit volume, not calories per serving" is `:permanent:`.
+### The comprehension→integration boundary
 
-### `:resource:` tag migration
+`:literature:` notes render the source faithfully, in your words (comprehension —
+Adler's "state the unity"). `:permanent:` notes are your own claim, integrated with the
+rest of the graph (integration — the remix/ideation step). The "rewrite in your own words"
+move *is* this boundary. A note that stops at faithful summary is a literature note, not a
+permanent one, regardless of how it is tagged.
 
-`:resource:` is a legacy tag that conflated procedural and declarative knowledge. It is being
-retired in favour of the `:runbook:` / `:permanent:` split. Migration path for existing
-`:resource:` notes:
-- Has a procedure or step-by-step content → retag `:runbook:`
-- Has a claim expressible in your own words → retag `:permanent:` (and write the claim if
-  it isn't there yet)
-- Pure lookup table with no claim → retag `:runbook:`
+### Migrating the legacy `:resource:` tag
 
-Migration happens opportunistically during weekly review note encounters, not as a bulk sweep.
-
-### Domain-specific applications
-
-- **ADHD management:** the note must express a concrete claim or strategy, not an aspiration.
-  "Brief meditation at pomodoro breaks reduces afternoon executive function crash" passes.
-  "I should meditate" does not.
-- **Professional/hobby software:** setup guides and procedures → `:runbook:`. Insights about
-  why something works → `:permanent:`. "How to configure Istio mTLS" is a runbook. "mTLS at
-  the mesh layer eliminates per-service certificate management" is permanent.
-- **Hobbies (coffee, etc.):** recipes and brew guides → `:runbook:`. Observations about
-  extraction dynamics → `:permanent:`.
-
-### Journal files contain no org-roam nodes
-
-Journal files are the capture layer. No heading within a journal file should carry a
-`:PROPERTIES: :ID:` block — i.e., no org-roam nodes at any level inside journal files.
-
-The weekly review is the processing gate: if a thought captured in a journal is worth being
-in the knowledge graph, the weekly review is the moment to extract it as a proper note.
-Allowing in-journal nodes blurs this boundary and lets half-processed captures accumulate
-in the graph.
+`:resource:` conflated the two kinds above, so it is being retired via the same test:
+content with a procedure → `:runbook:`; content with a claim → `:permanent:` (write the
+claim if it isn't there yet). Do it opportunistically during weekly-review note encounters,
+not as a bulk sweep — bulk sweeps stall, opportunistic migration accumulates. ([[0025]]
+later develops *why* `:resource:` fails as a tag — it is a "function-axis dodge" — and adds
+the two-axis model of the tag vocabulary.)
 
 ## Alternatives considered
 
-**Allow heading-level nodes in journal files** — rejected. These pass the `C-c n r`
-random-note filter (which only excludes file-level journal nodes) and would surface during
-review as if they were processed knowledge. The confusion cost outweighs the convenience
-of in-place linking.
+**Keep the four-criteria list (brain/CLAUDE.md as-is)** — superseded, not rejected. The
+four are correct but silent on the requirement most often skipped: "in your own words,
+standalone" (#5) and the ramification (#7). CLAUDE.md should adopt the seven and reference
+this ADR.
 
-**Topic-titled permanent notes** — rejected (Ahrens, Matuschak both agree). A topic title
-makes the note a container, not an idea. Containers don't link meaningfully to other ideas;
-they just collect children. The zettelkasten works through claim-to-claim connections.
+**A `:structure:` or `:moc:` tag** — rejected. Premature taxonomy for a category of one;
+function is carried by content and backlinks. Reconsider only at demonstrated critical
+mass.
 
-**No quality bar — let the lifecycle tags do the work** — rejected. `:fleeting:` captures
-are explicitly unprocessed, but nothing prevents them from accumulating indefinitely.
-The quality bar is the criterion the weekly review uses to decide whether a fleeting note
-has been properly processed. Without it, "processed" has no definition.
+**Collapse related claims into one comprehensive note** — rejected as the default. It reads
+tidier but destroys link precision. Hub-and-spokes preserves both atomicity and the
+synthesis.
+
+**No quality bar — let the lifecycle tags carry it** — rejected. Nothing stops `:fleeting:`
+captures from accumulating indefinitely; the bar is the criterion the weekly review uses to
+decide whether a note has actually been processed. Without it, "processed" has no
+definition.
 
 ## Consequences
 
-- The `C-c n r` keybinding filters out file-level `:journal:` nodes. No further filter
-  change is needed if the journal-no-nodes rule is followed — heading-level journal nodes
-  will not exist.
-- The "does this note meet the bar?" question above is the core judgment in the brain
-  weekly review step (see ADR 0020).
-- Aspiration notes without concrete claims should be flagged during triage and either
-  sharpened into a claim or deleted.
-- The lifecycle tag requirement means every note has an explicit processing state or kind —
-  no notes should exist without at least one of the four active tags (`:fleeting:`,
-  `:literature:`, `:permanent:`, `:runbook:`).
-- Existing `:resource:` notes are migrated opportunistically during weekly review encounters,
-  not in a bulk sweep. Bulk sweeps stall; opportunistic migration accumulates.
-- This ADR extends ADR 0001 — it does not replace it. ADR 0001 remains the canonical
-  definition of the three-stage maturity lifecycle and the reasoning behind it.
+- `brain/CLAUDE.md`'s "Note quality criteria" section should present these seven and point
+  here (ADR 0019) for the rationale.
+- This ADR is the canonical rationale for the `:resource:` → `:runbook:`/`:permanent:`
+  migration (procedural → runbook, has-a-claim → permanent; the "think vs. do" test);
+  [[0025]] supplies the structural reason the tag was wrong.
+- It extends [[0001]] and does not replace it — 0001 remains the definition of the
+  three-stage maturity lifecycle.
+- "Does this note meet the bar?" is the core judgment of the brain step in the weekly
+  review ([[0020]]).
+- The journal boundary that earlier lived in this ADR — no org-roam nodes inside journal
+  files — now lives with the rest of the journal's handling in [[0023]].
+- If a "promote/elaborate a fleeting note" skill is ever built, it should implement this
+  seven-point bar as its scoring rubric, and explicitly probe criteria 5–7 rather than
+  drafting them for the user — the integration must be the writer's own.

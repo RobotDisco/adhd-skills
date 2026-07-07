@@ -46,7 +46,32 @@ Graph edges exist to make ideas findable when you *don't* know where they live. 
 content always has a known coordinate (its date) plus content search, so linking effort buys
 discoverability you already have — cost without payoff.
 
+### No new org-roam nodes inside journal files
+
+The one-way rule has a structural corollary: **going forward, no heading inside a journal
+file gets a `:PROPERTIES: :ID:` block** — the target state is no org-roam nodes at any level
+in journal files. A journal entry is a capture husk, not a node to be cultivated; if a
+thought in it is worth being in the graph, the weekly review is the moment to extract it as
+a proper note. Adding in-journal nodes blurs the capture-vs-processed boundary the review
+exists to enforce, and reintroduces through the back door the discoverability machinery the
+one-way rule just established the journal doesn't need.
+
+**Legacy journal nodes exist and are migrated out opportunistically.** Entries from before
+this rule still carry heading-level `:ID:`s. They are *not* swept in bulk; the weekly
+random-note encounter ([[0020]]) is the catch. Because the `C-c n r` filter excludes only
+*file-level* `:journal:` nodes, a legacy heading node will surface there — and that
+surfacing is the cue: extract it into a proper note (or delete it) and strip the `:ID:`
+from the journal heading. Same opportunistic-not-bulk discipline as the `:resource:`
+migration in [[0019]].
+
 ## Alternatives considered
+
+**Permit heading-level nodes inside journal files** — rejected. They pass the `C-c n r`
+random-note filter (which excludes only *file-level* `:journal:` nodes) and surface during
+review as if they were processed knowledge. That confusion is the reason not to create new
+ones — and, for the legacy nodes that already exist, the same surfacing is repurposed as
+the migration catch (see Decision).
+
 
 **Treat journal entries as first-class linkable nodes** — rejected. Maintenance cost with no
 discoverability gain (entries are already date- and text-addressable). It also invites the
@@ -68,5 +93,11 @@ standing tax.
   not of every `.org` file in the repo.
 - Decision heuristic when unsure whether content belongs in the graph or just reachable from
   it: if it's date-indexed and searchable, a link adds nothing — leave it in the journal.
+- The `C-c n r` random-note filter needs no change: it excludes file-level `:journal:`
+  nodes while leaving legacy heading-level journal nodes visible — which is exactly what
+  lets the weekly sweep surface them for migration. New ones won't be created; old ones
+  drain out as they surface.
+- The no-nodes rule previously lived in the note-quality ADR ([[0019]]); it belongs here
+  with the rest of the journal's handling.
 - `brain/CLAUDE.md`'s daily-journalling section describes the journal as a fleeting feed but
-  does not state this linking rule; it can point at this ADR if the question recurs.
+  does not state these rules; it can point at this ADR if the question recurs.

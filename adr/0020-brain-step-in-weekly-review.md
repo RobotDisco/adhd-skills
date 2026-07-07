@@ -31,7 +31,7 @@ and never reaching the GTD audit.
 ### The brain step has two parts
 
 **1. Random note encounter (3 minutes)**
-Open a random non-journal node via `C-c n r`. The filter (ADR 0019) excludes file-level
+Open a random non-journal node via `C-c n r`. The filter (ADR 0023) excludes file-level
 `:journal:` nodes; all other nodes are fair game. Spend up to 3 minutes with whatever
 surfaces. The judgment question is: does this note meet the quality bar from ADR 0019?
 If not, it needs sharpening, linking, or deletion — note that for now and move on.
