@@ -19,8 +19,10 @@ Target time: 15–20 minutes. Name it if the session runs long.
 
 ## Before you start
 
-Read `references/note-shapes.md` in this skill directory — the per-kind shape criteria
-and link checks used in Phase 1.
+Read `../../references/note-quality-criteria.md` — shared with `brain-process-notes` —
+for the seven-criteria bar, per-kind shape criteria, and link checks used in Phase 1.
+Don't rely on `brain/CLAUDE.md` being loaded ambiently; it only loads when the working
+directory is inside that repo's tree.
 
 ---
 
@@ -37,12 +39,15 @@ Wait for their report.
 ### Responding to the assessment
 
 1. Identify the note kind from the tags reported.
-2. Apply the shape criteria for that kind from `references/note-shapes.md`.
+2. Apply the shape criteria for that kind from `../../references/note-quality-criteria.md`.
 3. Respond with one of:
    - **Affirm** — if the note meets its criteria. Be brief.
    - **Push back** — if something is soft. Name the specific gap:
      *"The title reads like a container — is there a claim buried in it?"*
      *"No incoming links in the backlinks buffer means this won't surface when you need it."*
+     For a soft gap in "own words," "a claim," or "a ramification" specifically — probe
+     with a question rather than proposing the answer yourself; that integration step
+     has to be theirs.
    - **Flag a definite gap** — if the note has no lifecycle tag, or is a legacy
      `:resource:`. Name it plainly and ask what it actually is before assessing further.
 
@@ -56,6 +61,10 @@ now. Bigger work gets named and moved on from:
 - **No lifecycle tag** — definite gap, name it immediately before anything else.
 - **Legacy `:resource:` tag** — ask what it actually is (procedure or claim?), then
   apply `:runbook:` or `:permanent:` criteria once retagged.
+- **Declined facet tag** (`:career:`, `:adhd:`, `:housekeeping:`, `:productivity:`, or
+  another undocumented one-off topic tag — ADR 0027) — name it as not part of the
+  sanctioned vocabulary and suggest removing it or replacing it with a link. This isn't a
+  lifecycle gap; the note's actual kind tag is unaffected, just the stray facet.
 - **Multiple lifecycle tags** (e.g. `:literature:` + `:fleeting:`) — apply the more
   specific tag's criteria. `:fleeting:` means unfinished, not a different kind.
 - **Note is clearly fine** — affirm briefly and move on. No padding.
