@@ -108,8 +108,12 @@ For every candidate from either pass, land on one of three outcomes:
 
 You can help shape the title and claim in conversation — ask questions, react, push on
 vagueness — but the words need to be the user's. Once landed, tell them what to capture
-and where (a `:fleeting:` heading or a new file via their usual `org-capture` flow); you
-do not create the file yourself.
+and where — a `:fleeting:` heading in an existing non-journal note, or a new file via
+their usual `org-capture` flow. **Never a new heading inside the journal entry itself**:
+per ADR 0023, no new org-roam nodes (`:PROPERTIES: :ID:`) get created inside journal
+files going forward — the journal is a one-way feed, and the extraction target always
+lives outside it, even though the fragment was found inside one. You do not create the
+file yourself.
 
 ---
 

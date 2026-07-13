@@ -7,7 +7,8 @@ description: |
   system", "weekly review", or "how does my system look". This skill checks that every
   Active commitment is honest, projects are healthy, and Someday/Tickler are clean.
   It does NOT handle inbox triage — run the gtd-triage skill first if inbox.org
-  has items.
+  has items. It also does NOT include the brain/zettelkasten step — the full weekly
+  review order is: gtd-triage → gtd-review (this skill) → brain-weekly-review.
 ---
 
 # GTD Review Skill
@@ -38,7 +39,18 @@ Target time: 30 minutes. Name it if the session runs long.
 
 ---
 
-## Phase 1: Routine / Habits audit
+## Phase 1: Deadline horizon scan (14-day)
+
+Run this before any scheduling decision in the phases that follow (ADR 0016) — a
+deadline with no scheduled lead time is an overdue *decision*, not just an overdue task.
+
+- Pull up every item with a `DEADLINE:` in the next 14 days.
+- For each: is there a scheduled `NEXT` with enough lead time to actually finish it?
+- If not: schedule it now, or flag it explicitly for the summary.
+
+---
+
+## Phase 2: Routine / Habits audit
 
 For each item in `* Routine`:
 
@@ -50,7 +62,7 @@ For each item in `* Routine`:
 
 ---
 
-## Phase 2: Tickler review
+## Phase 3: Tickler review
 
 For each item in `* Tickler`:
 
@@ -60,7 +72,7 @@ For each item in `* Tickler`:
 
 ---
 
-## Phase 3: Active board review
+## Phase 4: Active board review
 
 ### 4a. Single actions (NEXT / DOING / WAITING)
 
@@ -93,7 +105,7 @@ For each RETRO project:
 - Has at least one `NEXT` sub-item? If not, the project is stuck.
 - Does the parent heading have a Goal and Ramification in the body text?
 - Does the parent heading have **no** `SCHEDULED:` date? (prevents agenda bleed)
-- Check deadlines — anything due soon that needs a schedule change or escalation?
+- (Deadlines already covered in Phase 1 — no need to re-check here.)
 
 **Stuck project check:** if no NEXT exists, or the NEXT is stalled, an explicit
 decision is required — not a reschedule by default:
@@ -106,13 +118,14 @@ name it: *"That's planning — let's note it and stay in review mode."*
 
 ---
 
-## Phase 4: Someday review
+## Phase 5: Someday review
 
 Quick scan — not a planning session. For each item in `* Someday`:
 
 - Is now the right time to promote it? Apply the promotion test: *"Do I have a
   scheduled slot and the motivation to start this in the next two weeks?"* If yes,
-  promote. If unsure, leave it.
+  promote **and set `SCHEDULED:` to sometime this week** — promoting without a date
+  doesn't count as done (ADR 0009). If unsure, leave it.
 - Anything that will never happen → delete.
 
 **ADHD guardrail:** Someday review is the highest-risk phase for planning spirals.
@@ -121,7 +134,7 @@ If the user starts elaborating or decomposing a Someday item, name it:
 
 ---
 
-## Phase 5: Housekeeping
+## Phase 6: Housekeeping
 
 - Delete DONE items from `inbox.org` (not archived — Seafile file history is the safety net).
 - Archive DONE/CANCELLED items from `* Active` via `org-archive-subtree`.
@@ -129,16 +142,23 @@ If the user starts elaborating or decomposing a Someday item, name it:
 
 ---
 
-## Phase 6: Honest commitment check
+## Phase 7: Honest commitment check
 
 
 After all passes: scan Active one more time. Is everything there something genuinely
 being worked on this week or next? If the list still feels too large, demote without
 guilt. Active should create clarity, not anxiety.
 
+**Completion gate (ADR 0009):** the review isn't done when every item has been audited —
+it's done when there's a concrete pool of Active items scheduled somewhere this week.
+Confirm: did every promoted Someday item get a `SCHEDULED:` date, and does every
+non-PAUSED project have at least one `NEXT` that's actually scheduled this week, not
+just present? A review that leaves this unconfirmed hasn't finished its job even if
+every phase above ran clean.
+
 ---
 
-## Phase 7: Summary
+## Phase 8: Summary
 
 
 Present a grouped action list the user can execute in Emacs:
@@ -171,3 +191,8 @@ Present a grouped action list the user can execute in Emacs:
 ```
 
 Omit empty sections. End with: **"System health: [clean / N items need attention]."**
+
+This is the GTD-only portion of the weekly review. Per ADR 0020, it isn't the end of the
+ritual — continue into the `brain-weekly-review` skill in the same session (it runs
+last, as a lighter "landing" phase after this heavier audit). Don't stop here and treat
+the week's review as complete.
