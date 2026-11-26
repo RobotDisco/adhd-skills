@@ -195,6 +195,7 @@ Two parts: (1) sweep — scan for anything to capture, mark done, preview tomorr
 
 ### Evening sweep (~9pm) — "whole day captured, brain is free"
 Capture only — review journal, brain dump to inbox, confirm tomorrow's Highlight if not already set. No planning, no next-day decisions. Earns the completion signal (going to bed).
+Optional: `brain-session-journal` to pull the day's Claude-session learnings and incidents into the journal (ADR 0029). It's the one place Claude writes in the brain repo: approved items only, and it only adds text (new entries go in today's file; corrections go as dated update blocks on the entry they correct).
 
 **Two shutdowns, different jobs:** work signoff closes the professional context; 9pm sweep closes the whole day. Sequential, not redundant.
 
